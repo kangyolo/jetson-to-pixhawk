@@ -26,3 +26,7 @@ def arm():
     time.sleep(1)
   print("ARMED")
   return None
+
+vehicle = connectMyCopter()
+arm()
+print("END")
