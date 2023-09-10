@@ -46,3 +46,18 @@ to test arming the motor, please set the precheck arm in Mission Planner, and co
 rosrun mavros mavsafety arm
 ```
 ## Dronekit
+[Dronekit](https://dronekit-python.readthedocs.io/en/latest/) is a python library to interact with MAVLink, let's get it
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install python-dev
+sudo pip install future
+sudo apt-get install screen python-wxgtk4.0 python-lxml
+sudo pip install pyserial
+sudo pip install dronekit
+sudo pip install MAVProxy
+```
+connect the pixhawk using USB
+```
+sudo mavproxy --master =/dev/ttyACM0
+```
