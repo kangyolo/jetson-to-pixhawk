@@ -59,5 +59,5 @@ sudo pip install MAVProxy
 ```
 connect the pixhawk using USB
 ```
-sudo mavproxy --master =/dev/ttyACM0
+sudo mavproxy.py --master =/dev/ttyACM0
 ```
