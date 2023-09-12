@@ -63,7 +63,7 @@ sudo pip install pyserial dronekit MAVProxy
 ```
 connect the pixhawk using USB
 ```
-sudo mavproxy.py /dev/ttyACM0
+sudo mavproxy.py --master /dev/ttyACM0
 ```
 then will come up this message if completed
 
