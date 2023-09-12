@@ -1,12 +1,13 @@
 # Jetson Nano to Pixhawk
-The connection using mavlink and for these method I've tried Dronekit and ROS. This documentation consist both of it.
+The connection using Mavlink and for these methods I've tried Dronekit and ROS. This documentation consists both of them.
 
-Ubuntu 20.04
-Jetpack 4.6
+- Ubuntu 20.04
+- Jetpack 4.6
+- MicroSD 128 GB Sandisk A2
 
 ## ROS Noetic MAVROS
-First things first install ROS Noetic based on these article on [ros wiki](http://wiki.ros.org/noetic/Installation/Ubuntu)
-It is recommended to install ROS-Dekstop or ROS-Base only, the full version of ROS will take a lot of strorages.
+First things first install ROS Noetic based on these articles on [ros wiki](http://wiki.ros.org/noetic/Installation/Ubuntu)
+It is recommended to install ROS-Dekstop or ROS-Base only, the full version of ROS will take a lot of storages.
 ```
 sudo apt install ros-noetic-desktop
 ```
@@ -44,9 +45,9 @@ roslaunch mavros apm.launch
 open new terminal to monitor the ros node 
 ```
 rostopic list
-rostopic echo <the node that you want to monitor e.g /mavros/state>
+rostopic echo <the node that you want to monitor e.g./mavros/state>
 ```
-to test arming the motor, please set the precheck arm in Mission Planner, and comlete the pre-arming check then we can try to arm the motor
+to test arming the motor, please set the precheck arm in Mission Planner, and complete the pre-arming check then we can try to arm the motor
 ```
 rosrun mavros mavsafety arm
 ```
@@ -85,3 +86,5 @@ AP: RCOut: PWM:1-14
 AP: IMU0: fast sampling enabled 8.0kHz/1.0kHz
 AP: Frame: QUAD/X
 ```
+
+By: [Oki Aryawan](https://www.instagram.com/oki_aryawan/)
