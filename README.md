@@ -24,13 +24,18 @@ cd /opt/ros/noetic/lib/mavros/
 sudo ./install_geographiclib_datasets.sh
 ```
 it will take about 10 minutes or more, just wait for it.
+setup the ros installation
+```
+source /opt/ros/noetic/setup.bash
+echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
 
-connect the pixhawk to jetson using micro USB, the connection will establish as `/dev/ttyACM0`, you can verify using `lsusb -l /dev/tty*`
+connect the pixhawk to jetson using micro USB, the connection will establish as `/dev/ttyACM0`, you can verify using `ls /dev/tty*`
 before connect to the pixhawk, we have to set permission for the `/dev/ttyACM0` using user dialout, replace the `<username>` with your own username
 ```
 sudo chmod +x /dev/ttyACM0
 sudo usermod -a -G dialout <username>
-sudo usermod -a -G <group> <username>
 ```
 then we can access the pixhawk with mavros, for standard pixhawk 2.4 using `apm.launch` and pixhawk cube with `apm2.launch`
 ```
